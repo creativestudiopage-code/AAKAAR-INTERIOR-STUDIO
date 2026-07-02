@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>आkAAR INTERIOR STUDIO | Premium Interiors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "surface": "#fdf9f0",
+                    "surface-dim": "#dedad1",
+                    "surface-bright": "#fdf9f0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f7f3ea",
+                    "surface-container": "#f2ede4",
+                    "surface-container-high": "#ece8df",
+                    "surface-container-highest": "#e6e2d9",
+                    "on-surface": "#1c1c16",
+                    "on-surface-variant": "#47464b",
+                    "inverse-surface": "#32302a",
+                    "inverse-on-surface": "#f5f0e7",
+                    "outline": "#78767b",
+                    "outline-variant": "#c8c5cb",
+                    "surface-tint": "#5e5e65",
+                    "primary": "#05050a",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#1e1e24",
+                    "on-primary-container": "#87858d",
+                    "inverse-primary": "#c8c5cd",
+                    "secondary": "#735c00",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fed65b",
+                    "on-secondary-container": "#745c00",
+                    "tertiary": "#050605",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#1e1f1d",
+                    "on-tertiary-container": "#878683",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#e4e1ea",
+                    "primary-fixed-dim": "#c8c5cd",
+                    "on-primary-fixed": "#1b1b21",
+                    "on-primary-fixed-variant": "#47464d",
+                    "secondary-fixed": "#ffe088",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary-fixed": "#241a00",
+                    "on-secondary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#e4e2de",
+                    "tertiary-fixed-dim": "#c8c6c3",
+                    "on-tertiary-fixed": "#1b1c1a",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "background": "#fdf9f0",
+                    "on-background": "#1c1c16",
+                    "surface-variant": "#e6e2d9",
+                    "gold": "#d4af37",
+                    "gold-light": "#fed65b",
+                    "gold-dark": "#735c00",
+                },
+                fontFamily: {
+                    "headline": ["Plus Jakarta Sans", "sans-serif"],
+                    "body": ["Open Sans", "sans-serif"],
+                },
+                spacing: {
+                    "section-gap": "120px",
+                    "margin-desktop": "80px",
+                    "margin-tablet": "40px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                },
+                borderRadius: {
+                    "sm": "4px",
+                    "DEFAULT": "8px",
+                    "md": "12px",
+                    "lg": "16px",
+                    "xl": "24px",
+                    "full": "9999px",
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-overlay {
+        background: rgba(253, 249, 240, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    .glass-dark {
+        background: rgba(5, 5, 10, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    .video-thumbnail::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(5, 5, 10, 0.5), transparent 60%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .video-thumbnail:hover::after {
+        opacity: 1;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .hero-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out, transform 8s ease-out;
+        transform: scale(1.05);
+    }
+    .hero-slide.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+    .hero-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .progress-bar {
+        height: 3px;
+        background: rgba(254, 214, 91, 0.3);
+        border-radius: 9999px;
+        overflow: hidden;
+    }
+    .progress-bar-fill {
+        height: 100%;
+        background: #fed65b;
+        border-radius: 9999px;
+        transition: width 0.1s linear;
+    }
+    .reel-progress {
+        height: 2px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 9999px;
+        overflow: hidden;
+    }
+    .reel-progress-fill {
+        height: 100%;
+        background: #fed65b;
+        border-radius: 9999px;
+        transition: width 0.1s linear;
+    }
+    .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 60;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25D366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+    .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+        fill: white;
+    }
+    .nav-glass {
+        background: rgba(253, 249, 240, 0.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(200, 197, 203, 0.4);
+    }
+    .hero-overlay {
+        background: linear-gradient(to right, rgba(5,5,10,0.7) 0%, rgba(5,5,10,0.3) 50%, rgba(5,5,10,0.1) 100%);
+    }
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .carousel-dot.active {
+        background: #fed65b;
+        width: 32px;
+        border-radius: 4px;
+    }
+    .reel-card {
+        min-width: 280px;
+        aspect-ratio: 9/16;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: transform 0.4s ease;
+    }
+    .reel-card:hover {
+        transform: translateY(-4px);
+    }
+    .reel-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.7s ease;
+    }
+    .reel-card:hover img {
+        transform: scale(1.1);
+    }
+    .showcase-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    .showcase-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1s ease;
+    }
+    .showcase-card:hover img {
+        transform: scale(1.05);
+    }
+    .showcase-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(5,5,10,0.6), transparent 50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .showcase-card:hover .showcase-overlay {
+        opacity: 1;
+    }
+    .play-btn {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(254, 214, 91, 0.9);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .play-btn:hover {
+        transform: scale(1.1);
+        background: rgba(254, 214, 91, 1);
+    }
+    .reel-play-btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.3);
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .reel-play-btn:hover {
+        background: rgba(255,255,255,0.2);
+        border-color: rgba(255,255,255,0.5);
+    }
+    .input-underline {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #78767b;
+        padding: 12px 0;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        color: #1c1c16;
+        transition: border-color 0.3s ease;
+        outline: none;
+    }
+    .input-underline:focus {
+        border-bottom-color: #735c00;
+    }
+    .input-underline::placeholder {
+        color: #78767b;
+        opacity: 0.7;
+    }
+    .cta-btn {
+        background: #05050a;
+        color: #ffffff;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+    }
+    .cta-btn:hover {
+        background: #735c00;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(115, 92, 0, 0.25);
+    }
+    .gold-btn {
+        background: transparent;
+        color: #ffffff;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid rgba(255,255,255,0.4);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .gold-btn:hover {
+        background: rgba(254, 214, 91, 0.15);
+        border-color: #fed65b;
+        color: #fed65b;
+    }
+    .section-label {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #735c00;
+    }
+    .headline-xl {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #05050a;
+    }
+    .headline-lg {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        color: #05050a;
+    }
+    .headline-md {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.3;
+        color: #05050a;
+    }
+    .headline-sm {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #05050a;
+    }
+    .body-lg {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #47464b;
+    }
+    .body-md {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #47464b;
+    }
+    .label-lg {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .label-md {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    @media (max-width: 768px) {
+        .headline-xl { font-size: 40px; }
+        .headline-lg { font-size: 32px; }
+        .headline-md { font-size: 28px; }
+    }
+    .fade-in {
+        animation: fadeIn 0.5s ease forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .scale-in {
+        animation: scaleIn 0.5s ease forwards;
+    }
+    @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+    }
+    .reel-card video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #reelVideo {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    #reelOverlayContainer {
+        position: relative;
+        overflow: hidden;
+    }
+    #reelOverlayContainer > *:not(video) {
+        z-index: 2;
+        position: relative;
+    }
+    #reelTapArea {
+        z-index: 5 !important;
+    }
+</style>
+<base target="_blank">
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919214802954" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+</a>
+
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 nav-glass">
+    <div class="flex justify-between items-center h-[80px] px-5 md:px-20 max-w-[1440px] mx-auto">
+        <div class="font-headline text-2xl font-bold text-primary tracking-tight">आkAAR</div>
+        <div class="hidden md:flex items-center gap-10">
+            <a href="#portfolio" class="label-lg text-secondary border-b-2 border-secondary pb-1">Portfolio</a>
+            <a href="#services" class="label-lg text-on-surface-variant hover:text-primary transition-all">Services</a>
+            <a href="#showcase" class="label-lg text-on-surface-variant hover:text-primary transition-all">Showcase</a>
+            <a href="#contact" class="label-lg text-on-surface-variant hover:text-primary transition-all">Contact</a>
+        </div>
+        <a href="https://wa.me/919214802954" target="_blank" class="cta-btn hidden md:block">Inquire Now</a>
+        <button id="mobileMenuBtn" class="md:hidden text-primary">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-surface border-t border-outline-variant px-5 py-6">
+        <div class="flex flex-col gap-4">
+            <a href="#portfolio" class="label-lg text-secondary">Portfolio</a>
+            <a href="#services" class="label-lg text-on-surface-variant">Services</a>
+            <a href="#showcase" class="label-lg text-on-surface-variant">Showcase</a>
+            <a href="#contact" class="label-lg text-on-surface-variant">Contact</a>
+            <a href="https://wa.me/919214802954" target="_blank" class="cta-btn text-center mt-2">Inquire on WhatsApp</a>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-[80px]">
+
+<!-- HERO SECTION: Full-Bleed Interactive Slideshow -->
+<section class="relative w-full h-[100vh] min-h-[600px] overflow-hidden">
+    <!-- Slideshow Images -->
+    <div id="heroSlides" class="absolute inset-0">
+        <div class="hero-slide active" data-index="0">
+            <img src="https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg" alt="Luxury Bedroom Interior"/>
+        </div>
+        <div class="hero-slide" data-index="1">
+            <img src="https://kimi-web-img.moonshot.cn/img/media.architecturaldigest.com/83ffd6d22db4db9e591caf30b728d9d1abc80d61.jpg" alt="Premium Living Room"/>
+        </div>
+        <div class="hero-slide" data-index="2">
+            <img src="https://kimi-web-img.moonshot.cn/img/cdn.home-designing.com/08b62ba86ff6852b6879722b1466486159b1d037.jpg" alt="Modern Minimalist Living"/>
+        </div>
+        <div class="hero-slide" data-index="3">
+            <img src="https://kimi-web-img.moonshot.cn/img/www.vimercatimeda.com/76a320570234e981c936ba4080cf22102acdc54f.jpg" alt="Custom Luxury Wardrobe"/>
+        </div>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="absolute inset-0 flex flex-col justify-center px-5 md:px-20 max-w-[1440px] mx-auto z-10">
+        <span class="inline-block label-md text-secondary-fixed mb-4 tracking-widest">Premium Interior Design</span>
+        <h1 class="text-white font-headline text-[40px] md:text-[64px] font-semibold leading-[1.1] tracking-tight max-w-3xl mb-6">
+            Crafting Quality<br/>Interiors
+        </h1>
+        <p class="text-white/70 body-lg max-w-lg mb-10">
+            Bespoke bedrooms, premium kitchens, luxury living rooms, and custom wardrobes — designed with precision and passion.
+        </p>
+        <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/919214802954" target="_blank" class="cta-btn">Start Your Project</a>
+            <a href="#showcase" class="gold-btn">View Our Work</a>
+        </div>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="absolute bottom-10 left-5 md:left-20 flex gap-3 z-10">
+        <button class="carousel-dot active" data-slide="0"></button>
+        <button class="carousel-dot" data-slide="1"></button>
+        <button class="carousel-dot" data-slide="2"></button>
+        <button class="carousel-dot" data-slide="3"></button>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="absolute bottom-10 right-5 md:right-20 text-white/60 label-md z-10">
+        <span id="currentSlide">01</span> / <span id="totalSlides">04</span>
+    </div>
+</section>
+
+<!-- DESIGN REELS SECTION -->
+<section id="portfolio" class="mb-[120px] pt-20">
+    <div class="px-5 md:px-20 max-w-[1440px] mx-auto mb-8 flex justify-between items-end">
+        <div>
+            <span class="section-label mb-2 block">Short-form Stories</span>
+            <h2 class="headline-md">Design Reels</h2>
+            <p class="body-md mt-2 text-on-surface-variant">Quick glimpses into transformation narratives.</p>
+        </div>
+        <div class="flex gap-2">
+            <button id="reelPrev" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button id="reelNext" class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-all">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+        </div>
+    </div>
+    <div id="reelContainer" class="flex overflow-x-auto gap-6 px-5 md:px-20 hide-scrollbar pb-4 scroll-smooth">
+        <!-- Reel 1: BEDROOM REVEL 01.MP4 -->
+        <div class="reel-card group" onclick="openVideoOverlay('reel', 'BEDROOM%20REVEL%2001.mp4', 'Bedroom Reveal', 'https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg')">
+            <img src="https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg" alt="Luxury Bedroom"/>
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="reel-play-btn">
+                    <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                <p class="text-white font-headline text-lg font-bold">Bedroom Reveal</p>
+                <p class="text-white/60 text-sm mt-1">Warm wood & ambient lighting</p>
+            </div>
+            <div class="absolute top-4 right-4 z-10">
+                <span class="px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded uppercase tracking-wider">Video</span>
+            </div>
+        </div>
+        <!-- Reel 2: LIVING SPACE 02.MP4 -->
+        <div class="reel-card group" onclick="openVideoOverlay('reel', 'LIVING%20SPACE%2002.mp4', 'Living Space', 'https://kimi-web-img.moonshot.cn/img/media.architecturaldigest.com/83ffd6d22db4db9e591caf30b728d9d1abc80d61.jpg')">
+            <img src="https://kimi-web-img.moonshot.cn/img/media.architecturaldigest.com/83ffd6d22db4db9e591caf30b728d9d1abc80d61.jpg" alt="Living Room"/>
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="reel-play-btn">
+                    <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                <p class="text-white font-headline text-lg font-bold">Living Space</p>
+                <p class="text-white/60 text-sm mt-1">Minimalist elegance</p>
+            </div>
+            <div class="absolute top-4 right-4 z-10">
+                <span class="px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded uppercase tracking-wider">Video</span>
+            </div>
+        </div>
+        <!-- Reel 3 -->
+        <div class="reel-card group" onclick="openOverlay('reel', 'https://kimi-web-img.moonshot.cn/img/cdn.home-designing.com/08b62ba86ff6852b6879722b1466486159b1d037.jpg', 'Modern Opulence')">
+            <img src="https://kimi-web-img.moonshot.cn/img/cdn.home-designing.com/08b62ba86ff6852b6879722b1466486159b1d037.jpg" alt="Modern Opulence"/>
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="reel-play-btn">
+                    <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                <p class="text-white font-headline text-lg font-bold">Modern Opulence</p>
+                <p class="text-white/60 text-sm mt-1">Curved forms & brass accents</p>
+            </div>
+        </div>
+        <!-- Reel 4 -->
+        <div class="reel-card group" onclick="openOverlay('reel', 'https://kimi-web-img.moonshot.cn/img/www.vimercatimeda.com/76a320570234e981c936ba4080cf22102acdc54f.jpg', 'Wardrobe Design')">
+            <img src="https://kimi-web-img.moonshot.cn/img/www.vimercatimeda.com/76a320570234e981c936ba4080cf22102acdc54f.jpg" alt="Custom Wardrobe"/>
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="reel-play-btn">
+                    <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                <p class="text-white font-headline text-lg font-bold">Wardrobe Craft</p>
+                <p class="text-white/60 text-sm mt-1">Bespoke storage solutions</p>
+            </div>
+        </div>
+        <!-- Reel 5 -->
+        <div class="reel-card group" onclick="openOverlay('reel', 'https://kimi-web-img.moonshot.cn/img/media.architecturaldigest.com/82fe59a2c4b54db2758d2adb215c6a26c9fd2d4d.jpg', 'Desert Modernism')">
+            <img src="https://kimi-web-img.moonshot.cn/img/media.architecturaldigest.com/82fe59a2c4b54db2758d2adb215c6a26c9fd2d4d.jpg" alt="Desert Modernism"/>
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="reel-play-btn">
+                    <span class="material-symbols-outlined text-white text-2xl">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-black/80 to-transparent">
+                <p class="text-white font-headline text-lg font-bold">Desert Modernism</p>
+                <p class="text-white/60 text-sm mt-1">Organic warmth & precision</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWCASE VIDEOS SECTION -->
+<section id="showcase" class="mb-[120px] px-5 md:px-20 max-w-[1440px] mx-auto">
+    <div class="mb-12">
+        <span class="section-label mb-2 block">Deep Dives</span>
+        <h2 class="headline-md">Showcase Videos</h2>
+        <p class="body-md mt-2 text-on-surface-variant">Full-length explorations of luxury home transformations.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Video 1 -->
+        <div class="showcase-card group" onclick="openOverlay('showcase', 'https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg', 'Our Design Process')">
+            <div class="relative aspect-video overflow-hidden rounded-xl">
+                <img src="https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg" alt="Design Process"/>
+                <div class="showcase-overlay"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="play-btn">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h3 class="headline-sm">Our Design Process</h3>
+                <p class="body-md text-on-surface-variant mt-2">From conceptual sketches to architectural reality.</p>
+            </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="showcase-card group" onclick="openOverlay('showcase', 'https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/1a4c8caa9a7841e1aab06ee825feb57af1239e7b.jpg', 'Project Deep-Dive: Villa Vista')">
+            <div class="relative aspect-video overflow-hidden rounded-xl">
+                <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/1a4c8caa9a7841e1aab06ee825feb57af1239e7b.jpg" alt="Before After Transformation"/>
+                <div class="showcase-overlay"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="play-btn">
+                        <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <h3 class="headline-sm">Project Deep-Dive: Before & After</h3>
+                <p class="body-md text-on-surface-variant mt-2">An exploration of luxury transformation and spatial integration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="mb-[120px] px-5 md:px-20 max-w-[1440px] mx-auto">
+    <div class="mb-12 text-center">
+        <span class="section-label mb-2 block">What We Do</span>
+        <h2 class="headline-lg">Our Services</h2>
+        <p class="body-lg text-on-surface-variant mt-3 max-w-2xl mx-auto">
+            From concept to completion, we craft interiors that reflect your personality and elevate your lifestyle.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-surface-container-low rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl text-on-secondary-container">bed</span>
+            </div>
+            <h3 class="headline-sm mb-2">Bespoke Bedrooms</h3>
+            <p class="body-md text-on-surface-variant">Custom-designed sanctuaries with premium materials, ambient lighting, and personalized storage.</p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl text-on-secondary-container">countertops</span>
+            </div>
+            <h3 class="headline-sm mb-2">Premium Kitchens</h3>
+            <p class="body-md text-on-surface-variant">Modular kitchen solutions with imported fittings, stone countertops, and intelligent layouts.</p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl text-on-secondary-container">living</span>
+            </div>
+            <h3 class="headline-sm mb-2">Luxury Living Rooms</h3>
+            <p class="body-md text-on-surface-variant">Elegant living spaces designed for comfort, conversation, and timeless sophistication.</p>
+        </div>
+        <div class="bg-surface-container-low rounded-xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <div class="w-14 h-14 rounded-full bg-secondary-container flex items-center justify-center mb-5">
+                <span class="material-symbols-outlined text-2xl text-on-secondary-container">checkroom</span>
+            </div>
+            <h3 class="headline-sm mb-2">Custom Wardrobes</h3>
+            <p class="body-md text-on-surface-variant">Tailored closet systems with premium hardware, lighting, and organizational excellence.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CURATED DETAILS / GALLERY -->
+<section class="mb-[120px] px-5 md:px-20 max-w-[1440px] mx-auto">
+    <div class="mb-12">
+        <span class="section-label mb-2 block">The Details</span>
+        <h2 class="headline-md">Curated Details</h2>
+        <p class="body-md mt-2 text-on-surface-variant">The meticulous craftsmanship in every corner.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="aspect-square rounded-xl overflow-hidden border border-outline-variant/30">
+            <img src="https://kimi-web-img.moonshot.cn/img/media.architecturaldigest.com/82fe59a2c4b54db2758d2adb215c6a26c9fd2d4d.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Bedroom Detail"/>
+        </div>
+        <div class="aspect-[3/4] md:row-span-2 rounded-xl overflow-hidden border border-outline-variant/30">
+            <img src="https://kimi-web-img.moonshot.cn/img/cdn.home-designing.com/08b62ba86ff6852b6879722b1466486159b1d037.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Living Detail"/>
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-outline-variant/30">
+            <img src="https://kimi-web-img.moonshot.cn/img/www.venicasa.com/9135ddf79e4d29858eccefb76f4a32c248755e45.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Interior Detail"/>
+        </div>
+        <div class="aspect-[3/4] rounded-xl overflow-hidden border border-outline-variant/30">
+            <img src="https://kimi-web-img.moonshot.cn/img/cdn.closetfactory.com/bb5affd93b7126848fb21550b8f770afd822b0ad.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Wardrobe Detail"/>
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-outline-variant/30">
+            <img src="https://kimi-web-img.moonshot.cn/img/wisalai.com/bacccee52e06429c86519b3296fdf6b2a008f67a" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Transformation Detail"/>
+        </div>
+        <div class="aspect-square rounded-xl overflow-hidden border border-outline-variant/30">
+            <img src="https://kimi-web-img.moonshot.cn/img/hips.hearstapps.com/0efd9191da1ad3419317b328fca42bfd4b603659.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" alt="Closet Detail"/>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT / START YOUR PROJECT -->
+<section id="contact" class="mb-[120px] px-5 md:px-20 max-w-[1440px] mx-auto">
+    <div class="bg-surface-container-low rounded-2xl p-8 md:p-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+            <span class="section-label mb-2 block">Get in Touch</span>
+            <h2 class="headline-lg mb-6">Start Your Project</h2>
+            <p class="body-lg text-on-surface-variant max-w-md mb-8">
+                Ready to redefine your space? Share your vision with us, and let's create something extraordinary together.
+            </p>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-on-secondary-container">location_on</span>
+                    </div>
+                    <div>
+                        <p class="label-md text-on-surface-variant">Studio Address</p>
+                        <p class="body-md text-primary">Plot no. 11, near Shastri Park,<br/>Shastri Nagar, Ajmer, Rajasthan 305001</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-on-secondary-container">phone</span>
+                    </div>
+                    <div>
+                        <p class="label-md text-on-surface-variant">Contact</p>
+                        <p class="body-md text-primary">+91 92148 02954</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-on-secondary-container">schedule</span>
+                    </div>
+                    <div>
+                        <p class="label-md text-on-surface-variant">Working Hours</p>
+                        <p class="body-md text-primary">Mon - Sat: 10:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="space-y-8" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+            <div>
+                <label class="label-md text-on-surface-variant mb-2 block">Full Name</label>
+                <input type="text" class="input-underline" placeholder="Your Name" required/>
+            </div>
+            <div>
+                <label class="label-md text-on-surface-variant mb-2 block">Email Address</label>
+                <input type="email" class="input-underline" placeholder="email@example.com" required/>
+            </div>
+            <div>
+                <label class="label-md text-on-surface-variant mb-2 block">Phone Number</label>
+                <input type="tel" class="input-underline" placeholder="+91 98765 43210"/>
+            </div>
+            <div>
+                <label class="label-md text-on-surface-variant mb-2 block">Project Details</label>
+                <textarea class="input-underline resize-none" placeholder="Describe your vision..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="cta-btn w-full">Submit Inquiry</button>
+            <a href="https://wa.me/919214802954" target="_blank" class="gold-btn w-full block text-center border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all">
+                <span class="flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp
+                </span>
+            </a>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-surface-container-highest border-t border-outline-variant w-full py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-5 md:px-20 max-w-[1440px] mx-auto text-on-surface">
+        <div class="space-y-5">
+            <div class="font-headline text-2xl font-bold text-primary">आkAAR</div>
+            <p class="body-md opacity-80">
+                Redefining modern living through premium interior design. Crafting spaces that resonate with serenity, permanence, and meticulous craftsmanship in Ajmer, Rajasthan.
+            </p>
+        </div>
+        <div class="space-y-5">
+            <h4 class="label-lg text-secondary font-bold">Services</h4>
+            <div class="flex flex-col gap-3">
+                <a href="#services" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">Bespoke Bedrooms</a>
+                <a href="#services" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">Premium Kitchens</a>
+                <a href="#services" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">Luxury Living Rooms</a>
+                <a href="#services" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">Custom Wardrobes</a>
+            </div>
+        </div>
+        <div class="space-y-5">
+            <h4 class="label-lg text-secondary font-bold">Connect</h4>
+            <div class="flex flex-col gap-3">
+                <a href="https://wa.me/919214802954" target="_blank" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">WhatsApp</a>
+                <a href="#" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">Instagram</a>
+                <a href="#" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">Facebook</a>
+                <a href="#" class="text-on-surface-variant opacity-80 hover:text-secondary transition-colors">LinkedIn</a>
+            </div>
+        </div>
+        <div class="space-y-5">
+            <h4 class="label-lg text-secondary font-bold">Location</h4>
+            <p class="body-md opacity-80">
+                Plot no. 11, near Shastri Park,<br/>
+                Shastri Nagar, Ajmer,<br/>
+                Rajasthan 305001<br/><br/>
+                <span class="text-secondary font-semibold">+91 92148 02954</span>
+            </p>
+        </div>
+    </div>
+    <div class="px-5 md:px-20 max-w-[1440px] mx-auto mt-12 pt-8 border-t border-outline-variant/30 text-on-surface-variant opacity-60 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+        <span>© 2024 आkAAR INTERIOR STUDIO. Ajmer, Rajasthan</span>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-secondary transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-secondary transition-colors">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<!-- VIDEO OVERLAY SYSTEM -->
+<div id="videoOverlay" class="fixed inset-0 z-[100] hidden items-center justify-center glass-dark opacity-0 transition-opacity duration-500">
+    <button class="absolute top-6 right-6 text-white hover:text-secondary-fixed transition-colors z-[110]" onclick="closeOverlay()">
+        <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+
+    <!-- Reel Container (Portrait 9:16) with Video Player -->
+    <div id="reelOverlayContainer" class="hidden relative h-[85vh] aspect-[9/16] bg-primary rounded-2xl shadow-2xl overflow-hidden scale-90 transition-transform duration-500">
+        <!-- Video Element -->
+        <video id="reelVideo" class="absolute inset-0 w-full h-full object-cover" loop playsinline preload="auto" poster="" muted>
+            <source id="reelVideoSource" src="" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" style="z-index:2;"></div>
+        <!-- Content Overlay -->
+        <div class="absolute inset-0 flex flex-col justify-end p-8" style="z-index:3;">
+            <div class="mb-6">
+                <span class="inline-block px-3 py-1 bg-red-600/80 text-white text-xs font-bold rounded-full mb-3">VIDEO REEL</span>
+                <h3 id="reelTitle" class="text-white font-headline text-2xl font-bold mb-2">Reel Title</h3>
+                <p class="text-white/60 text-sm">Tap to play/pause • Swipe for more</p>
+            </div>
+            <!-- Custom Video Controls -->
+            <div class="flex items-center justify-between" style="z-index:4; position:relative;">
+                <div class="flex items-center gap-4 text-white">
+                    <button id="reelPlayPause" class="material-symbols-outlined text-3xl hover:text-secondary-fixed transition-colors" style="font-variation-settings: 'FILL' 1; z-index:6; position:relative;">play_arrow</button>
+                    <div class="w-32 reel-progress relative cursor-pointer" id="reelProgressBar" style="z-index:6;">
+                        <div class="reel-progress-fill" id="reelProgressFill" style="width: 0%"></div>
+                    </div>
+                    <span id="reelTime" class="text-xs text-white/70 font-mono">0:00</span>
+                    <button id="reelMute" class="material-symbols-outlined hover:text-secondary-fixed transition-colors" style="z-index:6; position:relative;">volume_off</button>
+                </div>
+                <button class="material-symbols-outlined text-white hover:text-secondary-fixed transition-colors" style="z-index:6; position:relative;">share</button>
+            </div>
+        </div>
+        <!-- Side Actions -->
+        <div class="absolute right-4 bottom-32 flex flex-col gap-5 text-white" style="z-index:4;">
+            <button class="flex flex-col items-center gap-1 hover:text-secondary-fixed transition-colors" style="z-index:6; position:relative;">
+                <span class="material-symbols-outlined text-2xl">favorite</span>
+                <span class="text-xs">2.4K</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 hover:text-secondary-fixed transition-colors" style="z-index:6; position:relative;">
+                <span class="material-symbols-outlined text-2xl">chat_bubble</span>
+                <span class="text-xs">128</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 hover:text-secondary-fixed transition-colors" style="z-index:6; position:relative;">
+                <span class="material-symbols-outlined text-2xl">bookmark</span>
+                <span class="text-xs">Save</span>
+            </button>
+        </div>
+        <!-- Tap to play/pause overlay -->
+        <div id="reelTapArea" class="absolute inset-0 cursor-pointer" style="z-index:5;"></div>
+    </div>
+
+    <!-- Showcase Container (Landscape 16:9) -->
+    <div id="showcaseContainer" class="hidden relative w-[90vw] max-w-[1200px] aspect-video bg-primary rounded-2xl shadow-2xl overflow-hidden scale-90 transition-transform duration-500">
+        <img id="showcasePlaceholder" class="w-full h-full object-cover opacity-50" src=""/>
+        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-secondary/20 text-secondary-fixed text-xs font-bold rounded-full mb-2">SHOWCASE</span>
+                    <h3 id="showcaseTitle" class="text-white font-headline text-2xl font-bold">Showcase Title</h3>
+                </div>
+                <div class="flex items-center gap-4 text-white/80">
+                    <span class="text-xs font-bold bg-white/10 px-2 py-1 rounded border border-white/20">4K</span>
+                    <button class="material-symbols-outlined text-2xl hover:text-secondary-fixed transition-colors">settings</button>
+                    <button class="material-symbols-outlined text-2xl hover:text-secondary-fixed transition-colors">fullscreen</button>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 text-white">
+                <button class="material-symbols-outlined text-4xl hover:text-secondary-fixed transition-colors" style="font-variation-settings: 'FILL' 1;">play_arrow</button>
+                <div class="flex-1 progress-bar relative">
+                    <div class="progress-bar-fill" style="width: 45%"></div>
+                </div>
+                <span class="text-sm font-headline font-semibold tracking-wide">12:45 / 24:00</span>
+                <button class="material-symbols-outlined hover:text-secondary-fixed transition-colors">volume_up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Hero Slideshow
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const currentSlideEl = document.getElementById('currentSlide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = String(totalSlides).padStart(2, '0');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        currentSlideEl.textContent = String(index + 1).padStart(2, '0');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        showSlide((currentSlide + 1) % totalSlides);
+    }
+
+    // Auto-advance slideshow
+    setInterval(nextSlide, 5000);
+
+    // Dot click handlers
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => showSlide(i));
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Reel Scroll Buttons
+    const reelContainer = document.getElementById('reelOverlayContainer');
+    document.getElementById('reelPrev').addEventListener('click', () => {
+        reelContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    document.getElementById('reelNext').addEventListener('click', () => {
+        reelContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+
+    // Video Overlay System
+    function openOverlay(type, imgSrc, title) {
+        const overlay = document.getElementById('videoOverlay');
+        const reelContainer = document.getElementById('reelOverlayContainer');
+        const showcaseContainer = document.getElementById('showcaseContainer');
+
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+
+        setTimeout(() => {
+            overlay.classList.remove('opacity-0');
+        }, 10);
+
+        if (type === 'reel') {
+            reelContainer.classList.remove('hidden');
+            showcaseContainer.classList.add('hidden');
+            // Image placeholder not needed for video reels
+            document.getElementById('reelTitle').innerText = title;
+            setTimeout(() => reelContainer.classList.remove('scale-90'), 50);
+        } else {
+            showcaseContainer.classList.remove('hidden');
+            reelContainer.classList.add('hidden');
+            document.getElementById('showcasePlaceholder').src = imgSrc;
+            document.getElementById('showcaseTitle').innerText = title;
+            setTimeout(() => showcaseContainer.classList.remove('scale-90'), 50);
+        }
+
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeOverlay() {
+        const overlay = document.getElementById('videoOverlay');
+        const reelContainer = document.getElementById('reelOverlayContainer');
+        const showcaseContainer = document.getElementById('showcaseContainer');
+
+        overlay.classList.add('opacity-0');
+        reelContainer.classList.add('scale-90');
+        showcaseContainer.classList.add('scale-90');
+
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }, 500);
+    }
+
+    // Close overlay on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeOverlay();
+    });
+
+    // Close overlay on backdrop click
+    document.getElementById('videoOverlay').addEventListener('click', (e) => {
+        if (e.target === document.getElementById('videoOverlay')) closeOverlay();
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
+</body>
+</html>
