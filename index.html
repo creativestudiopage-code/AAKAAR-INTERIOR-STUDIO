@@ -562,7 +562,7 @@
     </div>
     <div id="reelContainer" class="flex overflow-x-auto gap-6 px-5 md:px-20 hide-scrollbar pb-4 scroll-smooth">
         <!-- Reel 1: BEDROOM REVEL 01.MP4 -->
-        <div class="reel-card group" onclick="openVideoOverlay('reel', 'BEDROOM%20REVEL%2001.mp4', 'Bedroom Reveal', 'https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg')">
+        <div class="reel-card group" onclick="openVideoOverlay('reel', 'MASTERBEDROOM.mp4', 'Bedroom Reveal', 'https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg')">
             <img src="https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg" alt="Luxury Bedroom"/>
             <div class="absolute inset-0 flex items-center justify-center z-10">
                 <div class="reel-play-btn">
@@ -570,8 +570,8 @@
                 </div>
             </div>
             <div class="absolute bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-black/80 to-transparent">
-                <p class="text-white font-headline text-lg font-bold">Bedroom Reveal</p>
-                <p class="text-white/60 text-sm mt-1">Warm wood & ambient lighting</p>
+                <p class="text-white font-headline text-lg font-bold">Master Bedroom</p>
+                <p class="text-white/60 text-sm mt-1">Luxury master suite reveal</p>
             </div>
             <div class="absolute top-4 right-4 z-10">
                 <span class="px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded uppercase tracking-wider">Video</span>
@@ -644,35 +644,41 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Video 1 -->
-        <div class="showcase-card group" onclick="openOverlay('showcase', 'https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg', 'Our Design Process')">
+        <div class="showcase-card group" onclick="openVideoOverlay('showcase', 'BEDROOM%20REVEL%2001.mp4', 'Bedroom Reveal - Full Tour', 'https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg')">
             <div class="relative aspect-video overflow-hidden rounded-xl">
-                <img src="https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg" alt="Design Process"/>
+                <img src="https://kimi-web-img.moonshot.cn/img/www.greenply.com:5001/fe19f10d1e305127338f1c50b45daa8f3bb397c6.jpg" alt="Bedroom Reveal"/>
                 <div class="showcase-overlay"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="play-btn">
                         <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
                     </div>
                 </div>
+                <div class="absolute top-4 right-4 z-10">
+                    <span class="px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded uppercase tracking-wider">Video</span>
+                </div>
             </div>
             <div class="mt-5">
-                <h3 class="headline-sm">Our Design Process</h3>
-                <p class="body-md text-on-surface-variant mt-2">From conceptual sketches to architectural reality.</p>
+                <h3 class="headline-sm">Bedroom Reveal - Full Tour</h3>
+                <p class="body-md text-on-surface-variant mt-2">Complete walkthrough of our signature bedroom transformation.</p>
             </div>
         </div>
         <!-- Video 2 -->
-        <div class="showcase-card group" onclick="openOverlay('showcase', 'https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/1a4c8caa9a7841e1aab06ee825feb57af1239e7b.jpg', 'Project Deep-Dive: Villa Vista')">
+        <div class="showcase-card group" onclick="openVideoOverlay('showcase', 'LIVING%20SPACE%2002.mp4', 'Living Space Transformation', 'https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/1a4c8caa9a7841e1aab06ee825feb57af1239e7b.jpg')">
             <div class="relative aspect-video overflow-hidden rounded-xl">
-                <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/1a4c8caa9a7841e1aab06ee825feb57af1239e7b.jpg" alt="Before After Transformation"/>
+                <img src="https://kimi-web-img.moonshot.cn/img/images.squarespace-cdn.com/1a4c8caa9a7841e1aab06ee825feb57af1239e7b.jpg" alt="Living Space"/>
                 <div class="showcase-overlay"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="play-btn">
                         <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
                     </div>
                 </div>
+                <div class="absolute top-4 right-4 z-10">
+                    <span class="px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded uppercase tracking-wider">Video</span>
+                </div>
             </div>
             <div class="mt-5">
-                <h3 class="headline-sm">Project Deep-Dive: Before & After</h3>
-                <p class="body-md text-on-surface-variant mt-2">An exploration of luxury transformation and spatial integration.</p>
+                <h3 class="headline-sm">Living Space Transformation</h3>
+                <p class="body-md text-on-surface-variant mt-2">Elegant living room makeover with modern minimalist design.</p>
             </div>
         </div>
     </div>
@@ -893,8 +899,12 @@
 
     <!-- Showcase Container (Landscape 16:9) -->
     <div id="showcaseContainer" class="hidden relative w-[90vw] max-w-[1200px] aspect-video bg-primary rounded-2xl shadow-2xl overflow-hidden scale-90 transition-transform duration-500">
-        <img id="showcasePlaceholder" class="w-full h-full object-cover opacity-50" src=""/>
-        <div class="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black/70 via-black/10 to-transparent">
+        <video id="showcaseVideo" class="absolute inset-0 w-full h-full object-cover" loop playsinline preload="auto" poster="">
+            <source id="showcaseVideoSource" src="" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 flex flex-col justify-end p-8">
             <div class="flex items-center justify-between mb-4">
                 <div>
                     <span class="inline-block px-3 py-1 bg-secondary/20 text-secondary-fixed text-xs font-bold rounded-full mb-2">SHOWCASE</span>
@@ -902,17 +912,8 @@
                 </div>
                 <div class="flex items-center gap-4 text-white/80">
                     <span class="text-xs font-bold bg-white/10 px-2 py-1 rounded border border-white/20">4K</span>
-                    <button class="material-symbols-outlined text-2xl hover:text-secondary-fixed transition-colors">settings</button>
-                    <button class="material-symbols-outlined text-2xl hover:text-secondary-fixed transition-colors">fullscreen</button>
+                    <button class="material-symbols-outlined text-2xl hover:text-secondary-fixed transition-colors" onclick="toggleShowcaseFullscreen()">fullscreen</button>
                 </div>
-            </div>
-            <div class="flex items-center gap-4 text-white">
-                <button class="material-symbols-outlined text-4xl hover:text-secondary-fixed transition-colors" style="font-variation-settings: 'FILL' 1;">play_arrow</button>
-                <div class="flex-1 progress-bar relative">
-                    <div class="progress-bar-fill" style="width: 45%"></div>
-                </div>
-                <span class="text-sm font-headline font-semibold tracking-wide">12:45 / 24:00</span>
-                <button class="material-symbols-outlined hover:text-secondary-fixed transition-colors">volume_up</button>
             </div>
         </div>
     </div>
